@@ -1,0 +1,23 @@
+.body{
+    padding: 1em 1em;
+
+    .category{
+        margin: 0.8em 0;
+
+        .candidate{
+            padding: 0.4em 0.6em;
+            border: 1px #ffffff;
+            border-style: solid;
+            margin: 0.4em 0;
+
+            strong{
+                display: block;
+            }
+        }
+    }
+}
+
+p{
+    font-size: 1em;
+    font-weight: 900;
+}

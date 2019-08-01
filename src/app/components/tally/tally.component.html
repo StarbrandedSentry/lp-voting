@@ -1,0 +1,34 @@
+<div class="body">
+
+    <div class="category">
+        <p>PRESIDENTS</p>
+        <div *ngFor="let candidate of candidateServ.recoveredOrdCandidates" >
+            <div *ngIf="candidate.position == 'president'" class="candidate">
+                <strong>{{candidate.name}}</strong>
+                VOTES: {{candidate.votes}}
+            </div>
+        </div>
+    </div>
+            
+    <div class="category">
+        <p>VICE-PRESIDENTS</p>
+        <div *ngFor="let candidate of candidateServ.recoveredOrdCandidates" >
+            <div *ngIf="candidate.position == 'vice-president'" class="candidate">
+                <strong>{{candidate.name}}</strong>
+                VOTES: {{candidate.votes}}
+            </div>
+        </div>
+    </div>
+            
+    <div class="category">
+        <p>SECRETARIES</p>
+        <div *ngFor="let candidate of candidateServ.recoveredOrdCandidates" >
+            <div *ngIf="candidate.position == 'secretary'" class="candidate">
+                <strong>{{candidate.name}}</strong>
+                VOTES: {{candidate.votes}}
+            </div>
+        </div>
+    </div>
+            
+        
+</div>

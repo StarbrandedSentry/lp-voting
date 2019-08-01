@@ -1,0 +1,26 @@
+<div class="body">
+    <div class="details">
+        <input type="text" placeholder="Input ID" [(ngModel)]="id"/>
+        <input type="text" placeholder="Input name" class="name-input" [(ngModel)]="name"/>
+        <button class="start" (click)="vote()" *ngIf="!votingFlag">START VOTING</button>
+    </div>
+    
+
+    <div *ngIf="votingFlag" class="questionnaire">
+        <div *ngFor="let category of categories" class="categories">
+            <p>{{category.name | uppercase}}</p>
+            
+            <div *ngFor="let candidate of candidateServ.recoveredCandidates" class="candidate-container">
+                <div *ngIf="candidate.position == category.name" class="candidate" (click)="choose(candidate)" [ngClass]="{'selected': presCho == candidate.id || vPresCho == candidate.id || secCho == candidate.id}">
+                    <i class="material-icons">
+                        account_box
+                    </i>
+                    <span>{{candidate.name}}</span>
+                </div>
+                
+            </div>
+        </div>
+
+        <button (click)="finishVote()">FINISH</button>
+    </div>
+</div>

@@ -1,0 +1,133 @@
+.body{
+    //padding: 0.8em 1em;
+    
+    .details{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(auto-fit, 1fr);
+        grid-gap: 0.8em;
+        padding: 0.8em 2em;
+        //line-height: 1em;
+
+
+        input[type=text]{
+            color: #000000;
+            border: none;
+            background-color: #ffffff;
+            outline: none;
+            padding: 0.8em 1em;
+            box-shadow: 0px 4px 6px #4f4f4f;
+
+            &.name-input{
+                //grid-column-gap: 3;
+                grid-column: 1/4;
+            }
+        }
+
+        button{
+            outline: none;
+            box-shadow: 0px 4px 6px #4f4f4f;
+            color: #ffffff;
+            background-color: #0099BC;
+            border: none;
+            font-weight: 800;
+            padding: 1em;
+            transition-duration: 200ms;
+            transition-timing-function: ease-in;
+            transition-property: background-color;
+
+            &.start{
+                grid-column: 1/4;
+                display: inline-flex;
+                width: 60%;
+                align-self: center;
+                justify-self: center;
+                justify-content: center;
+                align-content: center;
+            }
+
+            &:hover{
+                background-color:#19bfe6;
+            }
+        }
+    }
+
+    .questionnaire{
+        padding: 0.8em 2em;
+
+        .categories{
+            p{
+                font-weight: 800;
+                font-size: 1em;
+            }
+            margin-bottom: 2em;
+
+            .candidate-container{
+
+                .candidate{
+                    display: flex;
+                    padding: 0.6em 0.3em;
+
+                    .material-icons{
+                        font-size: 2em;
+                        justify-self: center;
+                    }
+
+                    span{
+                        align-self: center;
+                        font-size: 0.8em;
+                        margin: 0 0.5em;
+                    }
+
+                    &:hover{
+                        border: 1px #ffffff;
+                        border-style: solid;
+                    }
+
+                    &:active{
+                        background-color: #FFB900;
+                        border-radius: 0.3em;
+                    }
+                }
+            }
+        }
+
+        button{
+            outline: none;
+            margin: 0.6em 0;
+            border: none;
+            font-size: 1em;
+            box-shadow: 0px 4px 6px #4f4f4f;
+            text-align: center;
+            width: 100%;
+            padding: 0.4em 0.6em;
+            background-color: #0099BC;
+            color: #ffffff;
+            transition-duration: 200ms;
+            transition-timing-function: ease-in;
+            transition-property: background-color;
+
+            &:hover{
+                background-color:#19bfe6;
+            }
+        }
+    }
+}
+
+@media(max-width: 700px){
+    .body{
+        .details{
+            padding: 0.8em 0.8em;
+        }
+        .questionnaire{
+            padding: 0.8em 0.8em;
+    
+            
+        }
+    }
+}
+
+.selected{
+    background-color: #FFB900;
+    border-radius: 0.3em;
+}
